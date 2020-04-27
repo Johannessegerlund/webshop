@@ -67,8 +67,6 @@ body {
   border: none;
   color: #666;
   -box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
 }
 #menu-bar ul a:hover {
   background: #0399D4 !important;
