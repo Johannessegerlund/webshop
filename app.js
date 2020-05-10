@@ -5,7 +5,7 @@ const io = require('socket.io')(http)
 const router = require('./routes/router')
 const expha = require('express-handlebars')
 const session = require('express-session')
-
+require('./database/Conect.js')
 require('dotenv').config()
 
 app.use(express.static('public'))

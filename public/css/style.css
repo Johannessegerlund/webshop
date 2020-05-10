@@ -1,6 +1,8 @@
 body {
-  background-color: rgb(220, 248, 239);
-  text-align: center;  
+  text-align: center; 
+  /* background-image: url(../images/close-up-photography-of-leaves-with-droplets-807598.jpg); */
+  background-repeat: no-repeat;
+  background-size: 1600px;
 }
 
 #menu-bar {
@@ -13,14 +15,10 @@ body {
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
   box-shadow: 1px 2px 3px #666666;
-  -webkit-box-shadow: 1px 2px 3px #666666;
-  -moz-box-shadow: 1px 2px 3px #666666;
-  background-image: url('../images/fl.jpg');
-  /* background: linear-gradient(top,  #0FA948,  #157A73);
-  background: -ms-linear-gradient(top,  #0FA948,  #157A73);
-  background: -webkit-gradient(linear, left top, left bottom, from(#0FA948), to(#157A73));
-  background: -moz-linear-gradient(top,  #0FA948,  #157A73); */
-  border: groove 1px #6D6D6D;
+  -webkit-box-shadow: 1px 2px 3px #103012;
+  -moz-box-shadow: 1px 2px 3px #000000;
+  /* background-image: url('../images/lev.jpg'); */
+  border: groove 5px rgb(0, 0, 0);
   position:relative;
   z-index:999;
 }
@@ -178,7 +176,7 @@ body {
   margin-left: 30px;
   margin-top: 40px;
 
-  border: 10px outset rgb(0, 0, 0);
+  border: 10px outset rgba(0, 0, 0, 0.733);
   
   height: 350px;
   width: 350px
@@ -188,12 +186,21 @@ body {
 
 .Text {
  float: right;
- margin-right: 30px;
  margin-top: 50px;
+ color: lavender;
+ background-color: rgba(0, 0, 0, 0.575);
+ font-size: 135%;
 }
 
 #test div{
   display: block;
 }
 
+.shoppic img{
+  height: 150px;
+  width: 150px;
+}
+
+
+       
 
