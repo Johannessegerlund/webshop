@@ -1,20 +1,21 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm">
 {{#each prod}}
+    <div class="col-sm-6 col-md-4">
       <div class="shoppic">
          <img src="{{imagePath}}" alt="...">
          </div>
       <div class="caption">
         <h3>{{title}}</h3>
         <div class="price">{{price}}</div>
-        <div class="buy"> <a="#" class="btn btn-primary" role="button">Lägg till i kundvagn</a></div>
+        <p>{{id}}</p>
+        <div class="buy"> <a href="/Cart/{{id}}" class="btn btn-primary" role="button">Lägg till i kundvagn</a></div>
       </div>
     </div>
+      {{/each}}
   </div>
 </div>
-      {{/each}}
   
   <form action="/webshop" method="POST">
   <input id="imagePath" name="imagePath" placeholder="imagePath" type="file">

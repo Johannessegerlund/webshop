@@ -7,6 +7,19 @@ const expha = require('express-handlebars')
 const session = require('express-session')
 require('./database/Conect.js')
 require('dotenv').config()
+const MonStorage = require('connect-mongo')(session)
+
+const mongoose = require('mongoose')
+require('dotenv').config()
+
+mongoose.connect(`${process.env.DB_USER}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+
+const db = mongoose.connection
+db.on('connected', () => { console.log('open') })
+db.on('error', console.error.bind(console, 'connection error:'))
+db.once('open', function () {
+  console.log('You are conected to the database')
+})
 
 app.use(express.static('public'))
 const hbs = expha.create({
@@ -22,13 +35,19 @@ app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 
 app.use(session({
-  secret: 'keyboard cat',
+  secret: 'Marabo',
   resave: false,
   saveUninitialized: false,
+  store: new MonStorage({ mongooseConnection: mongoose.connection }),
   cookie: {
-    secure: false
+    maxAge: 100 * 60 * 1000
   }
 }))
+
+app.use(function (req, res, next) {
+  res.locals.session = req.session
+  next()
+})
 
 app.use('/', router)
 
