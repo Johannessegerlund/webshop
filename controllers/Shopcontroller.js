@@ -1,4 +1,5 @@
 const Shopcontroller = {}
+const sendMail = require('../mail')
 // const mongoose = require('mongoose')
 const Product = require('../Items/Product')
 const Cart = require('../models/Cart')
@@ -78,7 +79,18 @@ Shopcontroller.SendRequest = (req, res) => {
 }
 
 Shopcontroller.SendEmail = (req, res) => {
-  console.log(req.body)
+  const { email, adress } = req.body
+  console.log('Data: ', req.body)
+  sendMail(email, adress, adress, function (error, info) {
+    if (error) {
+      console.log(error + 'error!!!!')
+      res.status(500).json({ message: 'internal error' })
+    } else {
+      console.log(info)
+      res.json({ message: 'message sent' })
+    }
+  })
+  res.json({ message: 'message recived' })
 }
 
 module.exports = Shopcontroller

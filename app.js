@@ -8,6 +8,9 @@ const session = require('express-session')
 require('./database/Conect.js')
 require('dotenv').config()
 const MonStorage = require('connect-mongo')(session)
+var cors = require('cors')
+
+app.use(cors())
 
 const mongoose = require('mongoose')
 require('dotenv').config()
