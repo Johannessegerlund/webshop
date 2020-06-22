@@ -1,6 +1,6 @@
 body {
   text-align: center; 
-  /* background-image: url(../images/close-up-photography-of-leaves-with-droplets-807598.jpg); */
+  background-image: url(../images/close-up-photography-of-leaves-with-droplets-807598.jpg);
   background-repeat: no-repeat;
   background-size: 1600px;
 }
@@ -17,7 +17,7 @@ body {
   box-shadow: 1px 2px 3px #666666;
   -webkit-box-shadow: 1px 2px 3px #103012;
   -moz-box-shadow: 1px 2px 3px #000000;
-  /* background-image: url('../images/lev.jpg'); */
+  background-image: url('../images/lev.jpg');
   border: groove 5px rgb(0, 0, 0);
   position:relative;
   z-index:999;
@@ -173,11 +173,6 @@ body {
 
 .piccontainer{
   float: left;
-  margin-left: 30px;
-  margin-top: 40px;
-
-  border: 10px outset rgba(0, 0, 0, 0.733);
-  
   height: 350px;
   width: 350px
 
@@ -185,11 +180,9 @@ body {
 
 
 .Text {
- float: right;
  margin-top: 50px;
- color: lavender;
- background-color: rgba(0, 0, 0, 0.575);
  font-size: 135%;
+ color: rgb(3, 2, 2);
 }
 
 #test div{
@@ -209,3 +202,7 @@ body {
 }
        
 
+.container {
+  margin-top: 50px;
+
+}
