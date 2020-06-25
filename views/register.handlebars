@@ -1,0 +1,15 @@
+<p>Register Account</p>
+<form action="/register" method="POST">
+<input type="text" placeholder="Enter username" name="username" required>
+<br>
+<input type="password" placeholder="Enter Password" minlength="8" name="psw" required>
+<br>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+<button type="submit">Register Account</button>
+
+</form>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="/">Sign in</a>.</p>
+  </div>
+  

@@ -1,7 +1,7 @@
 body {
   text-align: center; 
   background-image: url(../images/close-up-photography-of-leaves-with-droplets-807598.jpg);
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: 1600px;
 }
 
@@ -11,14 +11,7 @@ body {
   padding: 11px 6px 4px 6px;
   height: 52px;
   line-height: 100%;
-  border-radius: 22px;
-  -webkit-border-radius: 22px;
-  -moz-border-radius: 22px;
-  box-shadow: 1px 2px 3px #666666;
-  -webkit-box-shadow: 1px 2px 3px #103012;
-  -moz-box-shadow: 1px 2px 3px #000000;
-  background-image: url('../images/lev.jpg');
-  border: groove 5px rgb(0, 0, 0);
+  
   position:relative;
   z-index:999;
 }
@@ -172,9 +165,16 @@ body {
 }
 
 .piccontainer{
-  float: left;
-  height: 350px;
-  width: 350px
+ 
+  height: 340px;
+  width: 540px; 
+  /* margin: 0 auto; */
+  margin-top: 20px;
+  background: #faf7fa;
+  border: 20px outset #000000;
+border-radius: 10px;
+display: inline-block;
+margin-bottom: 20px;
 
 }
 
@@ -182,7 +182,7 @@ body {
 .Text {
  margin-top: 50px;
  font-size: 135%;
- color: rgb(3, 2, 2);
+ color: rgb(3, 3, 3);
 }
 
 #test div{
@@ -195,14 +195,85 @@ body {
 }
 
 #cart {
-  color: #000000;
+  color: #f8f5f5;
 }
 #cartqty{
-  color: #000000;
+  color: #f5f0f0;
 }
        
 
-.container {
+.container1 {
   margin-top: 50px;
+  background: #7D5683;
+  background: -moz-linear-gradient(45deg, #7D5683 0%, #B49AB1 50%, #A4621F 100%);
+  background: -webkit-linear-gradient(45deg, #7D5683 0%, #B49AB1 50%, #A4621F 100%);
+  background: linear-gradient(45deg, #7D5683 0%, #B49AB1 50%, #A4621F 100%);
+  border: 7px outset #000000;
+border-radius: 10px;
+display: inline-block;
+margin-bottom: 20px;
 
+}
+
+#Picture{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+}
+
+#check {
+  display: inline-block;
+}
+
+.item{
+  width: 350px;
+  height: 350px;
+}
+
+.Snippet {
+  margin-top: 10px;
+  height: 150px;
+  width: 500px;
+  overflow: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: rgb(252, 251, 250);
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.name{
+  padding: 3px;
+  border-width: 7px;
+  font-size: 20px;
+  border-style: groove;
+  border-color: #965396;;
+}
+
+.textarea{
+  margin-top: 15px;
+  padding: 3px;
+  border-width: 7px;
+  width: 300px;
+  font-size: 20px;
+  border-style: groove;
+  border-color: #965396;
+}
+
+.contact{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.about{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.form-group{
+  margin-left: 50px;
 }

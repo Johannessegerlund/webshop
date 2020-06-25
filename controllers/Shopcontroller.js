@@ -1,10 +1,11 @@
 const Shopcontroller = {}
 const sendMail = require('../mail')
-// const mongoose = require('mongoose')
 const Product = require('../Items/Product')
 const Cart = require('../models/Cart')
 
 Shopcontroller.Shop = async (req, res) => {
+  console.log(req.session.finduser)
+  const user = req.session.finduser
   const products = await Product.find({})
   const prod = products.map(prods => ({
     id: prods.id,
@@ -13,7 +14,7 @@ Shopcontroller.Shop = async (req, res) => {
     imagePath: prods.imagePath
 
   }))
-  res.render('webshop', { title: 'Webshop', prod })
+  res.render('webshop', { title: 'Webshop', prod, user })
 }
 
 Shopcontroller.createItem = async (req, res) => {
@@ -57,7 +58,6 @@ Shopcontroller.deleteOne = (req, res) => {
   cart.deleteOne(product)
   req.session.cart = cart
   console.log(req.session.cart)
-  // cart.add(product, product.id)
   res.redirect('/shopping-cart')
 }
 Shopcontroller.addOne = (req, res) => {
@@ -66,7 +66,6 @@ Shopcontroller.addOne = (req, res) => {
   cart.addOne(product)
   req.session.cart = cart
   console.log(req.session.cart)
-  // cart.add(product, product.id)
   res.redirect('/shopping-cart')
 }
 

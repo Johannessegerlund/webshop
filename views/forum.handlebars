@@ -1,0 +1,18 @@
+<div class="container1" >
+{{#each snippets}}
+
+<div class="Snippet">
+  <p class="title">Title {{title}}</p>
+    {{text}}
+</div>
+{{/each}}
+
+<form action="/forum" method="POST">
+<input class="name" name='title' placeholder="Skriv in ditt namn">
+<br>
+<textarea class="textarea" class="textArea" name='text' placeholder="Ställ din fråga"></textarea>
+<br>
+{{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+<button type="submit">Spara Snippet</button>
+</form>
+</div>

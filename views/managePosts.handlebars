@@ -1,0 +1,17 @@
+
+<div class="container1">
+{{#each snippets}}
+
+<form action="/managePosts/remove/{{id}}" method="GET">
+<button type="submit">Delete</button>
+</form>
+
+
+<div class="Snippet">
+  <p class="title">Title {{title}}</p>
+    {{text}}
+</div>
+
+
+{{/each}}
+</div>

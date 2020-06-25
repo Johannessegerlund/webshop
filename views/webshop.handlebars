@@ -1,26 +1,27 @@
 
-<div class="container">
+<div class="container1">
   <div class="row">
 {{#each prod}}
-    <div class="col-sm-6 col-md-4">
+    <div id="Picture" class="col-sm-6 col-md-4">
       <div class="shoppic">
          <img src="{{imagePath}}" alt="...">
          </div>
       <div class="caption">
         <h3>{{title}}</h3>
-        <div class="price">{{price}}</div>
-        <p>{{id}}</p>
+        <div class="price">{{price}} kr </div>
+        <p>Beskrivning: Lorum impsum</p>
         <div class="buy"> <a href="/Cart/{{id}}" class="btn btn-primary" role="button">Lägg till i kundvagn</a></div>
       </div>
     </div>
       {{/each}}
   </div>
 </div>
-  
+  {{#if user}}
   <form action="/webshop" method="POST">
   <input id="imagePath" name="imagePath" placeholder="imagePath" type="file">
   <input id="title" name="title" placeholder="title" type="text">
   <input id="price" name="price" placeholder="price" type="text">
   <button type="submit">save</button>
   </form>
+  {{/if}}
    
