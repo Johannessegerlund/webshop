@@ -37,6 +37,7 @@ Shopcontroller.AddtoCart = async (req, res) => {
     if (err) {
       return res.redirect('/webshop')
     }
+    console.log(cart)
     cart.add(product, product.id)
     req.session.cart = cart
     console.log(req.session.cart)

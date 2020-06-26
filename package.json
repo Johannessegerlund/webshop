@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "lint": "npx eslint . || exit 0",
     "lint:fix": "npx eslint . --fix || exit 0",
     "start": "node app.js",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "ajax": "0.0.4",
+    "bcrypt": "^3.0.8",
     "connect-mongo": "^3.2.0",
     "connect-mongodb-session": "^2.3.1",
     "cors": "^2.8.5",
@@ -29,12 +30,12 @@
     "express-handlebars": "^4.0.3",
     "express-session": "^1.17.0",
     "mailgun-js": "^0.22.0",
+    "mocha": "^8.0.1",
     "mongoose": "^5.9.13",
     "nodemailer": "^6.4.6",
     "nodemailer-mailgun-transport": "^2.0.0",
     "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0",
-    "bcrypt": "^3.0.8"
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
