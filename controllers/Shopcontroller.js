@@ -79,17 +79,23 @@ Shopcontroller.SendRequest = (req, res) => {
 
 Shopcontroller.SendEmail = (req, res) => {
   const { email, adress } = req.body
+  const title = 'order'
   console.log('Data: ', req.body)
-  sendMail(email, adress, adress, function (error, info) {
+  sendMail(email, title, adress, function (error, info) {
     if (error) {
       console.log(error + 'error!!!!')
       res.status(500).json({ message: 'internal error' })
     } else {
       console.log(info)
       res.json({ message: 'message sent' })
+      // res.redirect('/orderSent')
     }
   })
-  res.json({ message: 'message recived' })
+  // res.json({ message: 'message recived' })
+}
+
+Shopcontroller.ordersent = (req, res) => {
+  res.render('orderSent')
 }
 
 module.exports = Shopcontroller

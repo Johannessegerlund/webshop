@@ -28,5 +28,6 @@ router.post('/login', authController.loginpost)
 router.get('/managePosts', CheckSignedIn, snippetController.manageposts)
 router.get('/managePosts/remove/:id', CheckSignedIn, snippetController.removesnippet)
 router.post('/logout', authController.logout)
+router.get('/orderSent', Shopcontroller.ordersent)
 
 module.exports = router
