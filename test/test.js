@@ -13,7 +13,7 @@ before('mongodb-connection', function (done) {
   done()
 })
 
-describe('#Test1', function () {
+describe('#AddToCart', function () {
   it('Will put a iteam in the cart', async function () {
     const products = 'Rosa blomma'
     var cart = new Cart({})
@@ -24,7 +24,7 @@ describe('#Test1', function () {
   })
 })
 
-describe('#Test2', function () {
+describe('#CreatePost', function () {
   it('Will create a new post in forum', function (done) {
     const newSnippet = new Snippet({
       title: 'Blomma',
@@ -34,7 +34,7 @@ describe('#Test2', function () {
   })
 })
 
-describe('#email', function () {
+describe('#Sendemail', function () {
   it('Will send a email with info', function () {
     const { email, adress } = {
       email: 'johannessegerlund93@gmail.com',
