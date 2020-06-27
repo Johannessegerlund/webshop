@@ -88,14 +88,11 @@ Shopcontroller.SendEmail = (req, res) => {
       res.status(500).json({ message: 'internal error' })
     } else {
       console.log(info)
-      // res.redirect('/orderSent')
       res.json({ message: 'message sent' })
     }
   })
   console.log(req.session.cart)
   req.session.destroy()
-  // window.location.replace('/')
-  // res.redirect('/')
 }
 
 Shopcontroller.ordersent = (req, res) => {
