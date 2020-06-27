@@ -20,10 +20,8 @@ const sendMail = (email, subject, text, cb) => {
   }
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      // cb(err, null)
       console.log('error', error)
     } else {
-      // cb(null, data)
       console.log('message sent', info)
     }
   })
