@@ -4,7 +4,6 @@ const authController = {}
 
 authController.home = async (req, res) => {
   const user = req.session.finduser
-  // res.render('index', { title: 'Home', loggedInUser })
   res.render('index', { title: 'Home', user })
 }
 
