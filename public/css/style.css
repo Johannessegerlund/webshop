@@ -287,13 +287,12 @@ margin-bottom: 20px;
   font-size: 40px;
   color: whitesmoke;
   margin-top: 60px;
-  background-color: rgb(8, 8, 8);
 }
 
 .container{
   margin-top: 15px;
   border-width: 7px;
-  font-size: 20px;
+  font-size: 19px;
   border-style: groove;
   border-color: #0e080e;
   height: 500px;
