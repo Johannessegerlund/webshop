@@ -251,6 +251,10 @@ margin-bottom: 20px;
   border-color: #0c0a0c;;
 }
 
+#price{
+  color: white;
+}
+
 .textarea{
   margin-top: 5px;
   padding: 3px;
