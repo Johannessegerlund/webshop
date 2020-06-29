@@ -1,7 +1,6 @@
 body {
   text-align: center; 
   background-image: url(../images/close-up-photography-of-leaves-with-droplets-807598.jpg);
-  /* background-repeat: no-repeat; */
   background-size: 1600px;
 }
 
@@ -168,7 +167,6 @@ body {
  
   height: 340px;
   width: 540px; 
-  /* margin: 0 auto; */
   margin-top: 20px;
   background: #faf7fa;
   border: 20px outset #000000;
@@ -182,7 +180,6 @@ margin-bottom: 20px;
 .Text {
  margin-top: 50px;
  font-size: 135%;
- /* color: rgb(3, 3, 3); */
 }
 
 #test div{

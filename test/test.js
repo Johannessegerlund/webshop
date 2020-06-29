@@ -25,12 +25,12 @@ describe('#AddToCart', function () {
 })
 
 describe('#CreatePost', function () {
-  it('Will create a new post in forum', function (done) {
+  it('Will create a new post in forum', function () {
     const newSnippet = new Snippet({
       title: 'Blomma',
       text: 'Blommor är bra'
     })
-    newSnippet.save(done)
+    newSnippet.save()
   })
 })
 

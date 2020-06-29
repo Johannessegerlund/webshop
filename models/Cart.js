@@ -36,10 +36,4 @@ module.exports = function Cart (oldCart) {
     }
     return arr
   }
-
-  this.removeAll = function (oldcart) {
-    oldcart.items = {}
-    oldcart.totalQty = 0
-    oldcart.totalPrice = 0
-  }
 }
